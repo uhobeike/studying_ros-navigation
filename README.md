@@ -8,7 +8,7 @@
 * rosのC/C++ノード作成
 * rosのNavigation Stackの大まかな理解
 * 基本的なnavigationパッケージ作成
-* シュミレータ環境でのgmapping(SLAM)や、ナビゲーションや、waypoint_navigationのプログラム作成
+* シュミレータ環境(Gazebo)でのgmapping(SLAM)や、ナビゲーションや、waypoint_navigationのプログラム作成
 
 ## 予定
 多分、全部で10日分あると考えている。ros2はやりません。
