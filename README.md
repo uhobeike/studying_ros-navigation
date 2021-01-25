@@ -7,9 +7,14 @@
 利用可能なrosのナビゲーションパッケージ(実機/シュミレータ)を作成できるような技術の習得。
 
 ## 勉強会に参加して、できるようになること
+* rosでの基本的な開発
+* rosのC/C++ノード作成
+* rosのNavigation Stackの大まかな理解
+* 基本的なnavigationパッケージ作成
+* シュミレータ環境(Gazebo)でのgmapping(SLAM)や、ナビゲーションや、waypoint_navigationのプログラム作成
 
 ## 予定
-
+多分、全部で10日分あると考えている。ros2はやりません。
 
 | 日付（仮） | やる内容                                                                               | 
 | ---------- | -------------------------------------------------------------------------------------- | 
@@ -26,7 +31,9 @@
 
 #### 以下クリックして飛べます。
 
-## [資料室（Reference room）]()
+## [実践編（Practical edition）](https://github.com/uhobeike/studying_ros-navigation/tree/Practical_edition)
+## [資料室（Reference room）](https://github.com/uhobeike/studying_ros-navigation/tree/Reference_room)
+## [結果発表部屋（Result announcement room）](https://github.com/uhobeike/studying_ros-navigation/tree/Result_announcement_room)
 
 # Todo
 pdfではなく、スライド埋め込みで情報公開する
