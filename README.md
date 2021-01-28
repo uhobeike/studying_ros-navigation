@@ -29,6 +29,17 @@
 | 3/19       | 結果発表？！                                                                           | 
 | 3/26       | 反省会？？                                                                            | 
 
+## 勉強会動画
+
+|1回目：撮ってない|
+|---|
+||
+
+
+|2回目：音だけ😢|
+|---|
+|[![](https://i.gyazo.com/863451bcc09ecbbc191b177fd92a4bfa.png)](https://www.youtube.com/watch?v=f5PWUFdF9eE&feature=youtu.be)|
+
 #### 以下クリックして飛べます。
 
 ## [実践編（Practical edition）](https://github.com/uhobeike/studying_ros-navigation/tree/Practical_edition)
