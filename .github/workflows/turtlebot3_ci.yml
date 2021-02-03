@@ -2,6 +2,8 @@ name: turtlebot3_ci
 
 on:
   push:
+    paths-ignore:
+      - '**.md'
     branches: [ Turtlebot3_practice ]
 
   workflow_dispatch:
