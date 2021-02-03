@@ -19,7 +19,7 @@ jobs:
           required-ros-distributions: melodic
       - name: build
         run: |
-          source /opt/ros/$ROS_DISTRO/setup.bash
+          source /opt/ros//setup.bash
           mkdir -p ~/catkin_ws/src
           cd ~/catkin_ws
           cd ~/catkin_ws/src
