@@ -14,15 +14,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup ROS
-        uses: ros-tooling/setup-ros@0.1.1
+        uses: ros-tooling/setup-ros@0.0.25
         with:
           required-ros-distributions: melodic
-      - name: build
-        run: |
-          source /opt/ros/melodic/setup.bash
-          mkdir -p ~/catkin_ws/src
-          cd ~/catkin_ws
-          cd ~/catkin_ws/src
-          git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git
-          catkin build
-          source ../devel/setup.bash
+      
+      - run:    "source /opt/ros/melodic/setup.bash"
+      - run:    "mkdir -p ~/catkin_ws/src"
+      - run:    "cd ~/catkin_ws"
+      - run:    "cd ~/catkin_ws/src"
+      - run:    "git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git"
+      - run:    "catkin build"
+      - run:    "source ../devel/setup.bash"
