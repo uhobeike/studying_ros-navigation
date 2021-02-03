@@ -17,6 +17,11 @@ jobs:
         uses: ros-tooling/setup-ros@0.1.1
         with:
           required-ros-distributions: melodic
-
-      - run: "git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git"
-      - run: "catkin build"
+      - name: build
+        run: |
+          mkdir -p ~/catkin_ws/src
+          cd ~/catkin_ws
+          cd ~/catkin_ws/src
+          git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git
+          catkin build
+          source ../devel/setup.bash
