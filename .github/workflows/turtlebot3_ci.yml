@@ -17,11 +17,13 @@ jobs:
         uses: ros-tooling/setup-ros@0.0.26
         with:
           required-ros-distributions: melodic
-      - run:    "sudo apt install python-catkin-tools"
-      - run:    "source /opt/ros/melodic/setup.bash"
-      - run:    "mkdir -p ~/catkin_ws/src"
-      - run:    "cd ~/catkin_ws"
-      - run:    "cd ~/catkin_ws/src"
-      - run:    "git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git"
-      - run:    "catkin build"
-      - run:    "source ../devel/setup.bash"
+      - name: build_ws
+        run: |
+         sudo apt install python-catkin-tools
+         source /opt/ros/melodic/setup.bash
+         mkdir -p ~/catkin_ws/src
+         cd ~/catkin_ws
+         cd ~/catkin_ws/src
+         git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git
+         catkin build
+         source ../devel/setup.bash
