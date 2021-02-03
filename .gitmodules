@@ -1,0 +1,9 @@
+[submodule "turtlebot3"]
+	path = turtlebot3
+	url = https://github.com/uhobeike/turtlebot3.git
+[submodule "turtlebot3_msgs"]
+	path = turtlebot3_msgs
+	url = https://github.com/uhobeike/turtlebot3_msgs.git
+[submodule "turtlebot3_simulations"]
+	path = turtlebot3_simulations
+	url = https://github.com/uhobeike/turtlebot3_simulations.git
