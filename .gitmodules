@@ -1,6 +1,12 @@
-[submodule "turtlebot3_msgs"]
+[submodule "Turtlebot3_practice"]
+	path = turtlebot3
+	url = https://github.com/uhobeike/turtlebot3.git
+	branch = Turtlebot3_practice
+[submodule "Turtlebot3_practice_msgs"]
 	path = turtlebot3_msgs
 	url = https://github.com/uhobeike/turtlebot3_msgs.git
-[submodule "turtlebot3_simulations"]
+	branch = Turtlebot3_practice
+[submodule "Turtlebot3_practice_sim"]
 	path = turtlebot3_simulations
 	url = https://github.com/uhobeike/turtlebot3_simulations.git
+	branch = Turtlebot3_practice
