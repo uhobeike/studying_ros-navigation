@@ -26,5 +26,6 @@ jobs:
          catkin build
          cd ~/catkin_ws/src
          git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git
+         rosdep install -r -y --from-paths --ignore-src .
          catkin build
          source ../devel/setup.bash
