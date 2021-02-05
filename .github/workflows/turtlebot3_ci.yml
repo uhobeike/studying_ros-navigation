@@ -1,0 +1,34 @@
+name: turtlebot3_ci
+
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+    branches: [ Turtlebot3_practice ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup ROS
+        uses: ros-tooling/setup-ros@0.0.26
+        with:
+          required-ros-distributions: melodic
+      - name: build_ws
+        run: |
+         sudo apt install python-catkin-tools
+         source /opt/ros/melodic/setup.bash
+         mkdir -p ~/catkin_ws/src
+         cd ~/catkin_ws
+         catkin build
+         cd ~/catkin_ws/src
+         git clone --recursive -b Turtlebot3_practice https://github.com/uhobeike/studying_ros-navigation.git
+         rosdep update
+         rosdep install -r -y --from-paths --ignore-src .
+         catkin build
+         source ../devel/setup.bash
