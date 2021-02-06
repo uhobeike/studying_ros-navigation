@@ -40,4 +40,41 @@
 
 ### 参考になる資料
 
+* パラメータについて
 
+[狭いところ通りたい場合](http://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/#tuning-guide)
+
+[turtlebotのナビゲーションスタックの設定](http://wiki.ros.org/ja/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot)
+
+[ROSのナビゲーションamclについて理解を深めてみる](https://sy-base.com/myrobotics/ros/ros-amcl/)
+
+[ROS move baseでdwa local plannerを使ってみる](https://sy-base.com/myrobotics/ros/ros-dwa-local-planner/)
+
+[ROSのナビゲーションmove_baseについて理解を深めてみる](https://sy-base.com/myrobotics/ros/ros-move_base/)
+
+[ROS gmapping のパラメータ解説](https://sy-base.com/myrobotics/ros/gmapping/)
+
+[パラメータを調整する](https://github.com/TukamotoRyuzo/rostest/wiki/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%92%E8%AA%BF%E6%95%B4%E3%81%99%E3%82%8B)
+
+
+* navigation(goalさせるためのプログラム)
+
+[Sending Goals to the Navigation Stack](http://wiki.ros.org/ja/navigation/Tutorials/SendingSimpleGoals)
+
+
+[ロボットプログラミングⅡ：第6週　簡単なゴール（ActionLib）！](https://demura.net/education/lecture/12372.html)
+
+
+* Pub&Sub書き方例
+
+[ROS講座03 Pub & Sub 通信](https://qiita.com/srs/items/26ca826802d07a9e3d4e)
+
+* ros::spin()について
+
+[【ROS】ros::spin()とros::spinOnce()の違い](http://lilaboc.work/archives/16182817.html)
+
+
+
+* turtlebot3 e-manial
+
+[turtlebot3_e-manual](http://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#ros-1-simulation)
