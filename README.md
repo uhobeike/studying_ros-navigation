@@ -9,8 +9,24 @@
 ## [結果発表部屋（Result announcement room）](https://github.com/uhobeike/studying_ros-navigation/tree/Result_announcement_room)
 
 ## 課題内容
+マッピングを行うとマップ（pgm）(yaml)を手に入れると思います。
+それを使用してnavigationを行います。
+
+スタート地点からゴール地点までteleop等の操作無しで自律移動して完走できれば課題達成です:sunglasses:
+
+(もし、作業の進行が早かった場合は、タイムを競い合おうと思います。)
+
+完走できるように各自で、ゴール用のnode(waypoint navigation)(c++、python)の作成とパラメータ調整を行いましょう。
+
+課題を達成するための参考になる資料は下にあります。
 
 ### コースについて
+`roslaunch turtlebot3_gazebo turtlebot3_practice`を立ち上げると下の写真のようなワールド
+が立ち上がります。
+
+走行経路に様々な障害物が置かれています。うまくゴールするには、工夫をする必要が有ります。
+
+障害物にはなるべく衝突しないようにしましょう。
 
 <table>
 <th>スタート地点とゴール地点について</th>
@@ -20,3 +36,7 @@
 <td><img width="300" src="https://i.gyazo.com/0450ac0ed29d9e012507fab529a53295.png"></td>
 </tr>
 </table>
+
+### 参考になる資料
+
+
