@@ -38,6 +38,20 @@
 </tr>
 </table>
 
+### 実践編の具体的ながれ
+1. 使用するエディターについて
+
+2. rosのインストールについて
+
+3. rosのワークスペースの作り方について
+
+4. rosのナビゲーション・マッピングの使い方について
+
+5. rosのC++のノードの作成方法について/ゴール用ノードの作成方法について
+
+6. waypoint_navigationのノード作成方法について
+
+7. 各自で工夫を凝らす
 ### 参考になる資料
 
 |  |
@@ -48,7 +62,7 @@
 |  |
 | rosのPub&Subの書き方　コンパイルから実行まで(C++コーディングの基本的な) |
 | [ROS講座03 Pub & Sub 通信](https://qiita.com/srs/items/26ca826802d07a9e3d4e) |
-|  |
+| [c++ classを使ったコーディング](https://image.slidesharecdn.com/160626-170515015321/95/ros-76-638.jpg?cb=1611797140) |
 | ros::spin()について　コールバック関数の動作について |
 | [【ROS】ros::spin()とros::spinOnce()の違い](http://lilaboc.work/archives/16182817.html) |
 |  |
@@ -63,3 +77,7 @@
 | turtlebotについて |
 | [turtlebotのナビゲーションスタックの設定](http://wiki.ros.org/ja/turtlebot_navigation/Tutorials/Setup%20the%20Navigation%20Stack%20for%20TurtleBot) |
 | [turtlebot3_e-manual](http://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#ros-1-simulation) |
+
+パラメータについては、[ROSロボットプログラミングバイブル](https://www.amazon.co.jp/ROS%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB-%E8%A1%A8-%E5%85%81%E3%80%93/dp/4274221962)という本に詳しく書かれているので、そちら見るのもありです。
+
+
