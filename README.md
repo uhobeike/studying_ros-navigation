@@ -24,6 +24,7 @@ catkin build
 ```
 cd ~/turtlebot3pr_ws/src
 git clone -b Turtlebot3_practice --recursive https://github.com/uhobeike/studying_ros-navigation.git
+rosdep update
 rosdep install -r -y --from-paths --ignore-src ./
 ```
 * ビルド
