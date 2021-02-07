@@ -22,7 +22,7 @@
 課題を達成するための参考になる資料は下にあります。
 
 ### コースについて
-`roslaunch turtlebot3_gazebo turtlebot3_practice`を立ち上げると下の写真のようなワールド
+`roslaunch turtlebot3_gazebo turtlebot3_practice.launch`を立ち上げると下の写真のようなワールド
 が立ち上がります。
 
 走行経路に様々な障害物が置かれています。うまくゴールするには、工夫をする必要が有ります。
