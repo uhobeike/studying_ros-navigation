@@ -20,10 +20,11 @@ mkdir -p ~/turtlebot3pr_ws/src
 cd turtlebot3pr_ws
 catkin build
 ```
-* ソースコードのクローン
+* ソースコードのクローン&依存パッケージのインストール
 ```
 cd ~/turtlebot3pr_ws/src
 git clone -b Turtlebot3_practice --recursive https://github.com/uhobeike/studying_ros-navigation.git
+rosdep install -r -y --from-paths --ignore-src ./
 ```
 * ビルド
 ```
