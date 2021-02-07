@@ -43,7 +43,7 @@
 
 2. rosのインストールについて
 
-3. rosのワークスペースの作り方について
+3. rosのワークスペースの作り方について([こちらのパッケージをインストールします](https://github.com/uhobeike/studying_ros-navigation/tree/Turtlebot3_practice))
 
 4. rosのナビゲーション・マッピングの使い方について
 
