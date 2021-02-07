@@ -52,6 +52,18 @@
 6. waypoint_navigationのノード作成方法について
 
 7. 各自で工夫を凝らす
+### マッピング方法
+
+```
+~$ roslaunch turtlebot3_gazebo turtlebot3_practice.launch
+~$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+~$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+~$ rosrun map_server map_saver -f ~/map
+```
+
+### ナビゲーション方法
+
+
 ### 参考になる資料
 
 |  |
