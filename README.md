@@ -35,5 +35,6 @@ catkin build
 ```
 echo "source ~/turtlebot3pr_ws/devel/setup.bash" >> ~/.bashrc
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+source ~/.bashrc
 ```
 
