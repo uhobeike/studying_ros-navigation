@@ -9,6 +9,9 @@
 ## [結果発表部屋（Result announcement room）](https://github.com/uhobeike/studying_ros-navigation/tree/Result_announcement_room)
 
 ## パッケージのインストール方法(ワークスペースの構築から)
+```
+*注意* catkin_makeを使用していたワークスペースでcatkin buildを行うには/build /installフォルダを削除する必要がある。
+```
 
 * `catkin build`を使用するためにインストール。
 ```
