@@ -12,7 +12,7 @@ ROS melodicをインストールします。
 - メインPC 
  - OS: Ubuntu18.04LTS (desktop) 
 
-#3.インストールと設定
+#3 インストールと設定
 今回はROS1のubuntu18.04に対応したバージョンであるROS melodicと
 tutkebot3用のパッケージをインストールしましょう
 melodicのインストールについてはありがたいことに
@@ -27,7 +27,10 @@ sudo apt-get upgrade
 sudo apt-get install -y curl
 bash -c "$(curl -SsfL https://git.io/ros-melodic-desktop)"
 ```
-うまく行かなかった場合には次のサイトを参考にROS関係を削除してください。
+うまく行かなかった場合にはコマンドでROSを削除後、サイトを参考にインストールしてください。
+```
+sudo apt-get remove ros-*
+```
 
 http://wiki.ros.org/melodic/Installation/Ubuntu
 
@@ -106,20 +109,7 @@ roslaunch turtlebot3_fake turtlebot3_fake.launch
 お疲れ様でした。
 次に実践編へ行きましょう！！！
 
-#5.slamについて
-```
-roslaunch turtlebot3_gazebo turtlebot3_aws_2021_mapping.launch
-roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
-roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
-rosrun map_server map_saver -f ~/map
-```
-#6.navigationについて
-```
-roslaunch turtlebot3_gazebo turtlebot3_aws_2021.launch
-roslaunch turtlebot3_navigation turtlebot3_navigation.launch
-```
-
-#7.トラブルシューティング
+#.トラブルシューティング
 エラーが出た場合にはパスが通ってない場合があるため
 
 ```
