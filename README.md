@@ -3,50 +3,134 @@
 ## 概要
 勉強会に参加している方々および今後の後輩のための資料として作成したリポジトリ。
 
-## 目的
-利用可能なrosのナビゲーションパッケージ(実機/シュミレータ)を作成できるような技術の習得。
+#1.はじめに
+研究室でのROS実習用に作成しました。
+※筆者も勉強中なためその都度加筆します
+※rdcラボの方で参考にされる方はorne環境はcatkin buildを利用してビルドください
+#2.環境
+環境は以下の環境を想定しています。
 
-## 勉強会に参加して、できるようになること
-* rosでの基本的な開発
-* rosのC/C++ノード作成
-* rosのNavigation Stackの大まかな理解
-* 基本的なnavigationパッケージ作成
-* シュミレータ環境(Gazebo)でのgmapping(SLAM)や、ナビゲーションや、waypoint_navigationのプログラム作成
+- メインPC 
+ - OS: Ubuntu18.04LTS (desktop) 
 
-## 予定
-多分、全部で10日分あると考えている。ros2はやりません。
-
-| 日付（仮） | やる内容                                                                               | 
-| ---------- | -------------------------------------------------------------------------------------- | 
-| 1/21       | ナビゲーションについて/rosのNavigation Stackの構成/move_baseについて(パラメータ) | 
-| 1/28       | rosのNavigation Stackの構成/amclについて(パラメータ)                             | 
-| 2/4        | move_base/amclのソースから抜粋する/抜粋したやつの計算方法やパラメータとの関係の説明    | 
-| 2/11       | turtlebot3のパッケージの中を見にいこう/構成方法について話す/参考にした事例も話す       | 
-| 2/18       | 実践！！！(マッピングとナビゲーションについて)                                                                            | 
-| 2/25       | 実践！！！(パラメータとウェイポイントナビゲーションについて)                                                                             | 
-| 3/5        | 実践！！！(各自、工夫を凝らす？！)                                                                              | 
-| 3/12       | 実践！！！(各自、工夫を凝らす？！)                                                                             | 
-| 3/19       | 結果発表？！                                                                           | 
-| 3/26       | 反省会？？                                                                            | 
-
-## 勉強会動画
-
-|1回目：撮ってない|
-|---|
-||
+#3.インストールと設定
+今回はROS1のubuntu18.04に対応したバージョンであるROS melodicと
+tutkebot3用のパッケージをインストールしましょう
+melodicのインストールについてはありがたいことに
+https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu18.04_desktop
+なる便利なものがあるため利用しましょう！
 
 
-|2回目：音だけ😢|
-|---|
-|[![](https://i.gyazo.com/863451bcc09ecbbc191b177fd92a4bfa.png)](https://www.youtube.com/watch?v=f5PWUFdF9eE&feature=youtu.be)|
+#####3.1 ROS melodicのインストール　
+```bash:メインPC
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y curl
+bash -c "$(curl -SsfL https://git.io/ros-melodic-desktop)"
+```
+うまく行かなかった場合には次のサイトを参考にROS関係を削除してください。
 
-#### 以下クリックして飛べます。
+http://wiki.ros.org/melodic/Installation/Ubuntu
 
-## [実践編（Practical edition）](https://github.com/uhobeike/studying_ros-navigation/tree/Practical_edition)
-## [実践編ソースコード（Turtlebot3_practice）](https://github.com/uhobeike/studying_ros-navigation/tree/Turtlebot3_practice)
-## [資料室（Reference room）](https://github.com/uhobeike/studying_ros-navigation/tree/Reference_room)
-## [結果発表部屋（Result announcement room）](https://github.com/uhobeike/studying_ros-navigation/tree/Result_announcement_room)
+#####3.2 ROSの環境設定
+この段階ではROSへパスが通っておらず、コマンドなどが利用できないためパスを通しましょう。
+その後、ターミナルを起動するたびに設定するのが面倒なのでbashrc（ターミナルを起動するたびに実行させるもの）へ登録しましょう
+（これをやっておかないと様々なエラーが起きるのでお忘れなく）
 
+```bash:メインPC
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+source /opt/ros/melodic/setup.bash
+```
 
-# Todo
-pdfではなく、スライド埋め込みで情報公開する。
+#####3.3 rosinstallの準備
+ROS installというビルド用のものやらライブラリをインストールします
+
+```bash:メインPC
+sudo apt  install python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential python-catkin-tools
+```
+
+#####3.4 rosdepを設定 
+```bash:メインPC
+sudo apt install python-rosdep
+sudo rosdep init
+rosdep update
+```
+
+#####3.5 workspaceを設定 
+rosで用いられる作業用スペースを作成します（よく用いられる名前のcatkin_wsで作成します）
+
+```bash:メインPC
+source ~/.bashrc
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+catkin_init_workspace
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+cd ~/catkin_ws　&&　catkin build
+source ~/catkin_ws/devel/setup.bash
+```
+#####3.6 turtlebot3用の依存パッケージをインストール 
+turtlebot3に必要なパッケージをインストールします。
+（gmappingをgitから入れると何故かビルドできないためaptで入れましょう）
+
+```bash:メインPC
+sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan ros-melodic-rosserial-arduino ros-melodic-rosserial-python ros-melodic-rosserial-server ros-melodic-rosserial-client ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro ros-melodic-compressed-image-transport ros-melodic-rqt-image-view ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
+```
+次にturtlebot3 のパッケージをダウンロード後、ビルドします
+
+```bash:メインPC
+cd ~/catkin_ws/src  <--各自、変更をお願いします。
+git clone --recursive https://github.com/uhobeike/turtlebot3_aws_2021.git
+rosdep update
+rosdep install -r -y --from-paths --ignore-src ./
+```
+
+インストールが終了したらPCでビルドしましょう。
+ビルドした時にエラーがでなければ正常にインストールが出来ているはずです…
+
+```bash:メインPC
+source /opt/ros/melodic/setup.bash
+catkin build
+```
+
+#4.実行
+設定が終わったので実行してみましょう
+Rvizを起動してburgerがあったら起動成功です。
+
+```bash:メインPC
+echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+source ~/.bashrc
+roslaunch turtlebot3_fake turtlebot3_fake.launch
+```
+
+これでひと通りの設定と起動ができたはずです。
+お疲れ様でした。
+次に実践編へ行きましょう！！！
+
+#5.slamについて
+```
+roslaunch turtlebot3_gazebo turtlebot3_aws_2021_mapping.launch
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+rosrun map_server map_saver -f ~/map
+```
+#6.navigationについて
+```
+roslaunch turtlebot3_gazebo turtlebot3_aws_2021.launch
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch
+```
+
+#7.トラブルシューティング
+エラーが出た場合にはパスが通ってない場合があるため
+
+```
+source /opt/ros/melodic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+```
+を実行してからcatkin buildでやり直しましょう。
+それでもうまくいかない場合にはとても手間ですが
+
+```
+sudo apt-get remove ros-*
+```
+を利用してROSをアンインストールしてから再インストールしましょう
