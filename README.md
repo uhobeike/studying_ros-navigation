@@ -6,13 +6,14 @@ ROS melodicをインストールします。
 
 # 1.はじめに
 インストールする際に、発生する不具合について私たちはは責任を負いません。
+
 # 2.環境
 環境は以下の環境を想定しています。
 
 - メインPC 
  - OS: Ubuntu18.04LTS (desktop) 
 
-# 3 インストールと設定
+# 3.インストールと設定
 今回はROS1のubuntu18.04に対応したバージョンであるROS melodicと
 tutkebot3用のパッケージをインストールしましょう
 melodicのインストールについてはありがたいことに
@@ -71,7 +72,7 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 cd ~/catkin_ws　&&　catkin build
 source ~/catkin_ws/devel/setup.bash
 ```
-##### 3.6 turtlebot3用の依存パッケージをインストール 
+### 3.6 turtlebot3用の依存パッケージをインストール 
 turtlebot3に必要なパッケージをインストールします。
 （gmappingをgitから入れると何故かビルドできないためaptで入れましょう）
 
