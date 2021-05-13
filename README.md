@@ -5,7 +5,7 @@
 ROS melodicをインストールします。
 
 # 1.はじめに
-インストールする際に、環境が破壊させるなどの不具合について筆者は責任を負いません。
+インストールする際に、発生する不具合について私たちはは責任を負いません。
 # 2.環境
 環境は以下の環境を想定しています。
 
@@ -20,7 +20,7 @@ https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu18.04_desktop
 なる便利なものがあるため利用しましょう！
 
 
-##### 3.1 ROS melodicのインストール　
+### 3.1 ROS melodicのインストール　
 ```bash:メインPC
 sudo apt-get update
 sudo apt-get upgrade
@@ -34,7 +34,7 @@ sudo apt-get remove ros-*
 
 http://wiki.ros.org/melodic/Installation/Ubuntu
 
-##### 3.2 ROSの環境設定
+### 3.2 ROSの環境設定
 この段階ではROSへパスが通っておらず、コマンドなどが利用できないためパスを通しましょう。
 その後、ターミナルを起動するたびに設定するのが面倒なのでbashrc（ターミナルを起動するたびに実行させるもの）へ登録しましょう
 （これをやっておかないと様々なエラーが起きるのでお忘れなく）
@@ -45,21 +45,21 @@ source ~/.bashrc
 source /opt/ros/melodic/setup.bash
 ```
 
-##### 3.3 rosinstallの準備
+### 3.3 rosinstallの準備
 ROS installやビルド用のcatkin-ものやらライブラリをインストールします
 
 ```bash:メインPC
 sudo apt  install python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential python-catkin-tools
 ```
 
-##### 3.4 rosdepを設定 
+### 3.4 rosdepを設定 
 ```bash:メインPC
 sudo apt install python-rosdep
 sudo rosdep init
 rosdep update
 ```
 
-##### 3.5 workspaceを設定 
+### 3.5 workspaceを設定 
 rosで用いられる作業用スペースを作成します（よく用いられる名前のcatkin_wsで作成します）
 
 ```bash:メインPC
@@ -109,7 +109,7 @@ roslaunch turtlebot3_fake turtlebot3_fake.launch
 お疲れ様でした。
 次に実践編へ行きましょう！！！
 
-# .トラブルシューティング
+# 5.トラブルシューティング
 エラーが出た場合にはパスが通ってない場合があるため
 
 ```
