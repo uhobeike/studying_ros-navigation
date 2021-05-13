@@ -2,11 +2,10 @@
 
 ## 概要
 勉強会に参加している方々および今後の後輩のための資料として作成したリポジトリ。
+ROS melodicをインストールします。
 
 #1.はじめに
-研究室でのROS実習用に作成しました。
-※筆者も勉強中なためその都度加筆します
-※rdcラボの方で参考にされる方はorne環境はcatkin buildを利用してビルドください
+インストールする際に、環境が破壊させるなどの不具合について筆者は責任を負いません。
 #2.環境
 環境は以下の環境を想定しています。
 
@@ -44,7 +43,7 @@ source /opt/ros/melodic/setup.bash
 ```
 
 #####3.3 rosinstallの準備
-ROS installというビルド用のものやらライブラリをインストールします
+ROS installやビルド用のcatkin-ものやらライブラリをインストールします
 
 ```bash:メインPC
 sudo apt  install python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential python-catkin-tools
@@ -133,4 +132,5 @@ source ~/catkin_ws/devel/setup.bash
 ```
 sudo apt-get remove ros-*
 ```
-を利用してROSをアンインストールしてから再インストールしましょう
+を利用してROSをアンインストールしてから再インストールしましょう。
+
