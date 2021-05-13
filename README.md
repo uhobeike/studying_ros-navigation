@@ -82,7 +82,7 @@ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy ros-melodic-te
 
 ```bash:メインPC
 cd ~/catkin_ws/src  <--各自、変更をお願いします。
-git clone --recursive https://github.com/uhobeike/turtlebot3_aws_2021.git
+git clone -b Turtlebot3_practice --recursive https://github.com/uhobeike/studying_ros-navigation.git
 rosdep update
 rosdep install -r -y --from-paths --ignore-src ./
 ```
@@ -117,7 +117,7 @@ source /opt/ros/melodic/setup.bash
 source ~/catkin_ws/devel/setup.bash
 ```
 を実行してからcatkin buildでやり直しましょう。
-それでもうまくいかない場合にはとても手間ですが
+それでもうまくいかない場合にはとても手間ですが前述した
 
 ```
 sudo apt-get remove ros-*
