@@ -40,6 +40,22 @@
 |---|
 |[![](https://i.gyazo.com/863451bcc09ecbbc191b177fd92a4bfa.png)](https://www.youtube.com/watch?v=f5PWUFdF9eE&feature=youtu.be)|
 
+|3回目：撮ってない|
+|---|
+||
+
+|4回目：CIT自律移動 勉強会 turtlebot3のパッケージ|5回目：CIT自律移動 勉強会 実践(マッピングとナビゲーションについて)|
+|---|---|
+|[![](https://i.gyazo.com/6601d58058a014568186c57613af659b.png)](https://youtu.be/YbParNRqGQE)|[![](https://i.gyazo.com/64ff77a91809a8b5b6b60ef12fe5676f.png)](https://youtu.be/BxYfgf6fReI)|
+
+|6回目：CIT自律移動 勉強会 実践(パラメータとウェイポイントナビゲーションについて1)|7回目：CIT自律移動 勉強会 実践(パラメータとウェイポイントナビゲーションについて2)|
+|---|---|
+|[![](https://i.gyazo.com/319be43a8210d9e6f870bbac83ca5803.png)](https://youtu.be/fMpScJg5gPI)|[![](https://i.gyazo.com/ee71774d1b34a110082dc594adb68de4.png)](https://youtu.be/Wlx6feSTNmc)|
+
+|8回目：CIT自律移動 勉強会 実践(パラメータとウェイポイントナビゲーションについて3)|
+|---|
+|[![](https://i.gyazo.com/050df9d823fb054482a903432a863ada.png)](https://youtu.be/dqaMv6d-VM4)|
+
 #### 以下クリックして飛べます。
 
 ## [実践編（Practical edition）](https://github.com/uhobeike/studying_ros-navigation/tree/Practical_edition)
