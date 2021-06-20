@@ -56,13 +56,18 @@
 |---|
 |[![](https://i.gyazo.com/050df9d823fb054482a903432a863ada.png)](https://youtu.be/dqaMv6d-VM4)|
 
+## 資料集
+||
+| :--- | 
+|勉強会一回|
+| [ROS wiki]  <br>  (1)navigationのセットアップについて  <br>  　move_baseやamcl及びcostmapなどのparams,launchファイルの書き方が記載  <br>      http://wiki.ros.org/ja/navigation/Tutorials/RobotSetup  <br>  (2)move_baseについての詳細  <br>      http://wiki.ros.org/move_base  <br>  (3)costmap2dについての詳細  <br>      http://wiki.ros.org/costmap_2d?distro=noetic  <br>  (4)(局所経路計画)dwa_local_plannerについての詳細  <br>  http://wiki.ros.org/dwa_local_planner  <br>  (5)(大域経路計画)global_plannerについての詳細  <br>       http://wiki.ros.org/global_planner<br><br> [動作方法andパラメータ調整]  <br>  (6)navigation調整ガイド(costmap,local_planner)  <br>    　(1)の資料を読んだ後に見ることをすすめます...  <br>      http://wiki.ros.org/navigation/Tutorials/Navigation%20Tuning%20Guide  <br>  (7)turtlebot3 e-manual(costmap,dwa_local_planner)  <br>    　navigationの具体的な操作方法,inflation_radius,cost_scaling_factor,dwaに関する要調整パラメータ(max_vel)などが記載  <br>  　  虎の穴レベル  <br>      https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/#tuning-guide  <br>  (8)ROS Navigation Tuning Guide by Kaiyu Zheng(cost_map,planner,amcl)  <br>    　パラメータに関して詳細な記載,困ったらこれを見ると良いレベルで秀逸  <br>      http://kaiyuzheng.me/documents/navguide.pdf  <br>  (9)DWA Plannerの設定可能パラメータ一覧<br>      https://qiita.com/np_hsgw/items/ab3d4e34f4c1c160871d | 
+
+
 #### 以下クリックして飛べます。
 
+## [準備編（ros_install）](https://github.com/uhobeike/studying_ros-navigation/tree/ros_install)
 ## [実践編（Practical edition）](https://github.com/uhobeike/studying_ros-navigation/tree/Practical_edition)
 ## [実践編ソースコード（Turtlebot3_practice）](https://github.com/uhobeike/studying_ros-navigation/tree/Turtlebot3_practice)
-## [資料室（Reference room）](https://github.com/uhobeike/studying_ros-navigation/tree/Reference_room)
-## [結果発表部屋（Result announcement room）](https://github.com/uhobeike/studying_ros-navigation/tree/Result_announcement_room)
-
 
 # Todo
 pdfではなく、スライド埋め込みで情報公開する。
