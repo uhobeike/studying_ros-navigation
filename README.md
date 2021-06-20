@@ -2,22 +2,20 @@
 ## 概要
 用意されたturtlebot3のシミュレータ環境を用いて、ある設定された課題に挑戦してもらいます。
 
+事前にrosのnavigationについて本を読んだりサイトで調べたりするより、先に実際に動かした後からのほうがrosのnavigationについての理解がしやすくなると思うので、ぜひこの課題に挑戦してみてください。
+
 #### 以下クリックして飛べます。
 ## [準備編（ros_install）](https://github.com/uhobeike/studying_ros-navigation/tree/ros_install)
 ## [実践編（Practical edition）](https://github.com/uhobeike/studying_ros-navigation/tree/Practical_edition)
 ## [実践編ソースコード（Turtlebot3_practice）](https://github.com/uhobeike/studying_ros-navigation/tree/Turtlebot3_practice)
-## [資料室（Reference room）](https://github.com/uhobeike/studying_ros-navigation/tree/Reference_room)
-## [結果発表部屋（Result announcement room）](https://github.com/uhobeike/studying_ros-navigation/tree/Result_announcement_room)
 
 ## 課題内容
-マッピングを行うとマップ（pgm）(yaml)を手に入れると思います。
+マッピング(slam gmapping)を行うとマップ（pgm）(yaml)を手に入れると思います。
 それを使用してnavigationを行います。
 
-スタート地点からゴール地点までteleop等の操作無しで自律移動して完走できれば課題達成です:sunglasses:
+[初心者編] スタート地点からゴール地点までteleop等の操作無しで(ゴールポイントは、何回でも置いても良い)自律移動して完走できれば課題達成です:sunglasses:
 
-(もし、作業の進行が早かった場合は、タイムを競い合おうと思います。)
-
-完走できるように各自で、ゴール用のnode(waypoint navigation)(c++、python)の作成とパラメータ調整を行いましょう。
+[脱初心者編] 各自で、ゴール用のnode(waypoint navigation)(c++、python)の作成とパラメータ調整を行いましょう。
 
 課題を達成するための参考になる資料は下にあります。
 
@@ -64,6 +62,14 @@
 ```
 ~$ roslaunch turtlebot3_gazebo turtlebot3_practice.launch
 ~$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
+```
+### ウェイポイントナビゲーション方法
+ウェイポイントセット方法
+```
+```
+
+ウェイポイントナビゲーション方法
+```
 ```
 
 ### 参考になる資料
